@@ -38,16 +38,7 @@ const showMenu = (toggleId, navId) => {
   //   navMenu.classList.remove("show");
   // }
   navLinks.forEach((n) => n.addEventListener("click", () => { navMenu.classList.remove("show") }));
-  
-  /*===== COPY Email =====*/
-  const copy = document.getElementById("copy");
-  copy.addEventListener("click", () => {
-    navigator.clipboard.writeText("dipanwita3018@gmail.com");
-    copy.innerHTML = "copied";
-    setTimeout(() => {
-      copy.innerHTML = null;
-    }, 1000);
-  });
+
   
   /*===== SCROLL REVEAL ANIMATION =====*/
   const sr = ScrollReveal({
@@ -84,14 +75,5 @@ const showMenu = (toggleId, navId) => {
       element.classList.toggle("dark-mode")
     }
   
-    typewriter = () => {
-      // for(let i = 0; i < messageArr.length; i++) {
-      document.querySelector("#jobTitle").innerHTML = messageArr[0].substring(0, textPosition)  ;
-      if(textPosition ++  != messageArr[0].length)
-          setTimeout(typewriter, speed)
-    }
-  
-  
-    window.addEventListener("load" , typewriter);
-  
+    
   
